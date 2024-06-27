@@ -1,0 +1,5 @@
+baseURL: https://adams1mon.pages.dev
+languageCode: en-us
+title: Personal Site
+theme: 
+  - PaperMod
