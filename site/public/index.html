@@ -105,23 +105,47 @@
 </header>
 <main class="main"> 
 <article class="first-entry home-info">
-    <div class="profile_inner">
-    </div>
     <header class="entry-header">
-        <h1>PaperMod&rsquo;s Demo</h1>
+        
+        <h1 id="custom-title">~$ <span id="whoami"></span></h1>
     </header>
+    
     <div class="entry-content">
-        <p>Wwelcome <strong>you</strong></p>
-<ul>
-<li>bullet point is not working</li>
-</ul>
+        <p>Hi 👋</p>
+<p>My name is Adam. I am a software developer and this is my personal site,  where I share my thoughts about everything I find interesting.</p>
+
     </div>
+    
     <footer class="entry-footer">
         <div class="social-icons" >
+    <a href="https://www.linkedin.com/in/adam-simon-811368215" target="_blank" rel="noopener noreferrer me"
+        title="View LinkedIn Profile">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+    <rect x="2" y="9" width="4" height="12"></rect>
+    <circle cx="4" cy="4" r="2"></circle>
+</svg>
+    </a>
 </div>
 
     </footer>
 </article>
+
+
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+
+<script>
+const typed = new Typed('#whoami', {
+    strings: ['id -un', 'whoami'],
+    typeSpeed: 80,
+    backSpeed: 40,
+    startDelay: 1000,
+    backDelay: 500,
+    cursorChar: ' ▌',
+});
+</script>
     </main>
     
 <footer class="footer">
@@ -137,11 +161,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
         <path d="M12 6H0l6-6z" />
     </svg>
-</a><h1 id="ext">This is an extension</h1>
-
-<link rel="stylesheet" href="/css/custom.css">
-
-<script src="/js/custom.js"></script>
+</a>
 
 <script>
     let menu = document.getElementById('menu')
