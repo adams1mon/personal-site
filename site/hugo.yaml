@@ -1,6 +1,6 @@
 baseURL: https://adams1mon.pages.dev
 languageCode: en-us
-title: Home 
+title:  
 theme: 
   - PaperMod
 
@@ -21,6 +21,8 @@ params:
     - name: LinkedIn
       title: View LinkedIn profile
       url: "https://www.linkedin.com/in/adam-simon-811368215"
+  
+  ShowReadingTime: true
 
 markup:
   goldmark:
