@@ -14,55 +14,93 @@
 }
 
 @layer base {
-  
   body {
     @apply bg-background text-foreground;
     font-family: var(--terminal-font);
   }
 
-  .terminal-window {
-    @apply rounded-lg border border-muted/20 bg-background/95 backdrop-blur-sm;
+  .terminal-container {
+    @apply max-w-4xl mx-auto rounded-lg bg-background/95 backdrop-blur-sm relative overflow-hidden;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   }
 
-  .terminal-header {
-    @apply flex items-center gap-2 p-3 border-b border-muted/20;
-  }
-
-  .terminal-circle {
-    @apply w-3 h-3 rounded-full;
-  }
-
   .terminal-content {
-    @apply p-4 overflow-auto;
+    @apply p-6;
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--muted)) transparent;
+  }
+
+  .terminal-content::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .terminal-content::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .terminal-content::-webkit-scrollbar-thumb {
+    @apply bg-muted/20 rounded-full;
   }
 
   .command-prompt {
     @apply text-prompt font-medium;
+    text-shadow: 0 0 5px hsla(var(--prompt), 0.5);
   }
 
   .command-output {
     @apply text-foreground/90 mt-1 mb-4;
+    line-height: 1.6;
   }
 
   .ascii-art {
-    @apply font-mono whitespace-pre text-accent;
+    @apply font-mono whitespace-pre text-accent mb-4;
+    text-shadow: 0 0 5px hsla(var(--accent), 0.5);
+  }
+
+  .section-divider {
+    @apply border-t border-muted/20 my-8;
   }
 
   /* Blinking cursor animation */
   .cursor::after {
     content: '█';
-    @apply text-accent animate-pulse;
+    @apply text-accent;
+    animation: blink 1s step-end infinite;
   }
 
-  /* Typing animation */
-  .typing {
-    @apply overflow-hidden whitespace-nowrap;
-    animation: typing 3.5s steps(40, end);
+  .post-card, .stat-card {
+    background: linear-gradient(
+      to bottom right,
+      rgba(255, 255, 255, 0.02),
+      transparent
+    );
+    transition: transform 0.2s ease;
   }
 
-  @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
+  .post-card:hover, .stat-card:hover {
+    transform: translateY(-2px);
+  }
+
+  .stat-card {
+    position: relative;
+    overflow: hidden;
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+
+    /* CRT screen effect */
+  .terminal-crt {
+    background: repeating-linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3),
+      transparent 1px,
+      transparent 2px
+    );
+    background-size: cover;
+    background-attachment: fixed;
   }
 }

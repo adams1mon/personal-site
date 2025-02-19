@@ -1,6 +1,7 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { JetBrains_Mono } from 'next/font/google';
+import { Nav } from '@/components/nav';
 
 const jetbrainsMono = JetBrains_Mono({ 
   subsets: ['latin'],
@@ -27,8 +28,16 @@ export default function RootLayout({
   return (
     <html lang="en" className={jetbrainsMono.className}>
       <body>
-        <div className="min-h-screen bg-background">
-          {children}
+        <div className="min-h-screen bg-background terminal-crt">
+          <main className="container mx-auto px-2 py-4">
+            <div className="terminal-container terminal-crt">
+              <Nav />
+              <div className="section-divider my-0" />
+              <div className="terminal-content">
+                {children}
+              </div>
+            </div>
+          </main>
         </div>
       </body>
     </html>
