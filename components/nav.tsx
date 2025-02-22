@@ -8,10 +8,10 @@ export function Nav() {
   const pathname = usePathname();
 
   const links = [
-    { href: '/', label: 'Home', icon: Home },
-    { href: '/blog', label: 'Blog', icon: BookOpen },
-    { href: '/projects', label: 'Projects', icon: Code },
-    { href: '/about', label: 'About', icon: User },
+    { href: '/', label: '/home', icon: Home },
+    { href: '/blog', label: '~/blog', icon: BookOpen },
+    { href: '/projects', label: '~/projects', icon: Code },
+    { href: '/about', label: '~/about', icon: User },
   ];
 
   return (
@@ -23,7 +23,7 @@ export function Nav() {
             key={href}
             href={href}
             className={`
-              flex items-center gap-1.5 
+              flex items-center gap-2
               border-b-2 pb-0.5
               transition-colors duration-150
               hover:text-accent hover:border-accent

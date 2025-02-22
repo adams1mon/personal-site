@@ -9,14 +9,14 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Terminal Portfolio | Your Name',
-  description: 'A programmer\'s personal website featuring blog posts, projects, and interesting findings',
-  keywords: ['programming', 'developer', 'blog', 'portfolio', 'tech', 'software engineer'],
+  title: "Terminal Dojo",
+  description: "A wannabe wizard\'s personal website",
+  keywords: ["programming", "developer", "blog", "portfolio", "tech", "software engineer", "ascii", "terminal"],
   authors: [{ name: 'Your Name' }],
   openGraph: {
-    title: 'Terminal Portfolio | Your Name',
-    description: 'A programmer\'s personal website featuring blog posts, projects, and interesting findings',
-    type: 'website',
+    title: "Terminal Dojo",
+    description: "A wannabe wizard\'s personal website",
+    type: "website",
   },
 };
 
@@ -28,9 +28,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={jetbrainsMono.className}>
       <body>
-        <div className="min-h-screen bg-background terminal-crt">
+        <div className="min-h-screen bg-background crt overflow-auto">
           <main className="container mx-auto px-2 py-4">
-            <div className="terminal-container terminal-crt">
+            <div className="terminal-container">
               <Nav />
               <div className="section-divider my-0" />
               <div className="terminal-content">
