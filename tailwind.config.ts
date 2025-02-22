@@ -14,7 +14,7 @@ const config: Config = {
         muted: 'hsl(var(--muted))',
         accent: 'hsl(var(--accent))',
         success: 'hsl(var(--success))',
-        prompt: 'hsl(var(--prompt))',
+        ["accent-secondary"]: 'hsl(var(--accent-secondary))',
       },
     },
   },

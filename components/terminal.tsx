@@ -201,13 +201,10 @@ Star the repository if you find it interesting!`,
   return (
     <div className="max-w-4xl mx-auto">
       <div className="terminal-header">
-        <div className="terminal-circle bg-red-500"></div>
-        <div className="terminal-circle bg-yellow-500"></div>
-        <div className="terminal-circle bg-green-500"></div>
         <span className="ml-2 text-sm text-muted">guest@portfolio ~ </span>
       </div>
       
-      <div className="terminal-content h-[600px]">
+      <div className="terminal-content h-[600px] overflow-auto">
         <div className="mb-4 ascii-art">
 {`
  ____                                 _ 

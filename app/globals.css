@@ -4,13 +4,13 @@
 
 :root {
   /* Terminal-inspired theme with pleasant colors */
-  /*--background: 230 25% 10%;*/
   --background: 230 25% 10%;
+  --card-bg: 230 70% 10%;
   --foreground: 210 20% 98%;
   --muted: 210 20% 50%;
   --accent: 210 40% 60%;
   --success: 142 70% 45%;
-  --prompt: 330 65% 55%;
+  --accent-secondary: 330 65% 55%;
   --terminal-font: 'JetBrains Mono', monospace;
 }
 
@@ -44,8 +44,8 @@
   }
 
   .command-prompt {
-    @apply text-prompt font-medium;
-    text-shadow: 0 0 5px hsla(var(--prompt), 0.5);
+    @apply text-accent-secondary font-medium;
+    text-shadow: 0 0 5px hsla(var(--accent-secondary), 0.5);
   }
 
   .command-output {
@@ -70,21 +70,14 @@
   }
 
   .post-card, .stat-card {
-    background: linear-gradient(
-      to bottom right,
-      rgba(255, 255, 255, 0.02),
-      transparent
-    );
-    transition: transform 0.2s ease;
-  }
-
-  .post-card:hover, .stat-card:hover {
-    transform: translateY(-2px);
-  }
-
-  .stat-card {
-    position: relative;
-    overflow: hidden;
+    /*background: linear-gradient(*/
+    /*  to bottom right,*/
+    /*  rgba(255, 255, 255, 0.02),*/
+    /*  transparent*/
+    /*);*/
+    @apply p-2 border border-accent;
+    background: hsl(230 40% 10%);
+    /*background: hsl(var(--card-bg));*/
   }
 
   @keyframes blink {
